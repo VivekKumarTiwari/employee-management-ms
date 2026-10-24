@@ -4,8 +4,8 @@ import com.employee.management.service.dtos.EmployeeDto;
 import com.employee.management.service.entity.Employee;
 import com.employee.management.service.repository.EmployeeRepository;
 import lombok.AllArgsConstructor;
-import org.hibernate.annotations.Audited;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,7 +16,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     private final EmployeeRepository employeeRepository;
 
-    @Audited
+    @Autowired
     private ModelMapper modelMapper;
 
     @Override
