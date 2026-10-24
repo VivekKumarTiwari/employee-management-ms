@@ -2,6 +2,7 @@ package com.employee.management.service.service;
 
 import com.employee.management.service.dtos.EmployeeDto;
 import com.employee.management.service.entity.Employee;
+import com.employee.management.service.feignclient.DepartmentFeignClient;
 import com.employee.management.service.repository.EmployeeRepository;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -19,8 +20,13 @@ public class EmployeeServiceImpl implements EmployeeService{
     @Autowired
     private ModelMapper modelMapper;
 
+    @Autowired
+    DepartmentClientService departmentClientService;
+
     @Override
     public EmployeeDto saveEmployee(EmployeeDto employeeDto) {
+
+        departmentClientService.validateDepartment(employeeDto.getDepartmentId());
         // Convert DTO to Entity
         Employee employee = modelMapper.map(employeeDto, Employee.class);
         // Save Entity

@@ -9,15 +9,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-server-dashboard" />
       </profile>
-      <profile name="Annotation profile for department-management-service" enabled="true">
+      <profile name="Annotation profile for employee-management-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.48/lombok-1.18.48.jar" />
         </processorPath>
-        <module name="department-management-service" />
         <module name="employee-management-service" />
+        <module name="department-management-service" />
       </profile>
     </annotationProcessing>
   </component>
