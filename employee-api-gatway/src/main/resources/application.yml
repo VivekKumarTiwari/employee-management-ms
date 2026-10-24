@@ -4,7 +4,7 @@ spring:
   cloud:
     gateway:
       server:
-        webmvc:
+        webflux:
           routes:
             - id: employee-auth-services
               uri: lb://employee-auth-services
@@ -25,4 +25,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+jwt:
+  secret: mySuperStrongSecretKeyThatIsAtLeast32BytesLong123!
 
