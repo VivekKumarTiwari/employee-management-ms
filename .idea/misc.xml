@@ -7,6 +7,8 @@
         <option value="$PROJECT_DIR$/department-management-service/pom.xml" />
         <option value="$PROJECT_DIR$/employee-management-service/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-server-dashboard/pom.xml" />
+        <option value="$PROJECT_DIR$/employee-auth-services/pom.xml" />
+        <option value="$PROJECT_DIR$/employee-api-gatway/pom.xml" />
       </list>
     </option>
   </component>

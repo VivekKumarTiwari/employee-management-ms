@@ -9,7 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-server-dashboard" />
       </profile>
-      <profile name="Annotation profile for employee-management-service" enabled="true">
+      <profile name="Annotation profile for employee-auth-services" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -18,12 +18,16 @@
         </processorPath>
         <module name="employee-management-service" />
         <module name="department-management-service" />
+        <module name="employee-api-gatway" />
+        <module name="employee-auth-services" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="department-management-service" options="-parameters" />
+      <module name="employee-api-gatway" options="-parameters" />
+      <module name="employee-auth-services" options="-parameters" />
       <module name="employee-management-service" options="-parameters" />
       <module name="eureka-server-dashboard" options="-parameters" />
     </option>
